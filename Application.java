@@ -11,6 +11,9 @@ public class Application extends JFrame implements ActionListener {
 
   public Application() {
     setTitle("TODO_Application");
+    JLabel title=new JLabel("Hey,Welcome to the TODO Application");
+    title.setBounds(300, 20,300,20);
+    add(title);
     // Fix Function
     setLocation(400, 200);
     setLayout(null);
