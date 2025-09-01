@@ -13,6 +13,8 @@ public class Application extends JFrame implements ActionListener {
     setTitle("TODO_Application");
     JLabel title=new JLabel("Hey,Welcome to the TODO Application");
     title.setBounds(300, 20,300,20);
+    Font titleFont=new Font("Arial",Font.BOLD,20);
+    title.setFont(titleFont);
     add(title);
     // Fix Function
     setLocation(400, 200);
