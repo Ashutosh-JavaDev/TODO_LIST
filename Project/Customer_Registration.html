@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Customer Registration - Online Bookstore</title>
+<link rel="stylesheet" href="style.css">
+<script>
+// JavaScript function for form validation
+function validateRegistrationForm() {
+var customerName = document.forms["registrationForm"]["name"].value;
+var interest = document.forms["registrationForm"]["interest"].value;
+var contactNumber = document.forms["registrationForm"]["contact"].value;
+// Check if all fields are filled
+if (customerName == "" || interest == "" || contactNumber == "") {
+alert("All fields (Name, Interest, Contact Number) must be filled out.");
+return false; // Prevent form submission
+}
+
+// Optional: Validate contact number (e.g., must be numeric and 10 digits)
+if (isNaN(contactNumber) || contactNumber.length !== 10) {
+alert("Please enter a valid 10-digit numeric contact number.");
+return false; // Prevent form submission
+}
+// If all checks pass, allow form submission (or simulation in this case)
+alert("Registration successful! (Form data would be sent to server)");
+return true; // Allow form submission
+}
+</script>
+</head>
+<body>
+<!-- Header Division -->
+<div class="header">
+<img src="logo.png" alt="Bookstore Logo">
+<h1>The Reading Nook</h1>
+</div>
+<!-- Links Division -->
+<div class="nav-links">
+<a href="Home.html">Home</a>
+<a href="ListOfBooks.html">List Of Books</a>
+<a href="Customer_Registration.html">Customer Registration</a>
+<a href="Feedback.html">Feedback</a>
+</div>
+<!-- Information Division (Customer Registration Form Specific) -->
+<div class="info-section">
+<h2>Customer Registration</h2>
+<form name="registrationForm" onsubmit="return validateRegistrationForm()">
+<label for="name">Name of the Customer:</label>
+<input type="text" id="name" name="name" required>
+<label for="interest">His/her interest in books (e.g., Fiction, Science):</label>
+<input type="text" id="interest" name="interest" required>
+<label for="contact">Contact Number:</label>
+<input type="text" id="contact" name="contact" required>
+
+<input type="submit" value="SUBMIT">
+</form>
+</div>
+</body>
+</html>
