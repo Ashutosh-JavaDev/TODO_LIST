@@ -20,6 +20,7 @@ public class Application extends JFrame implements ActionListener {
     title.setFont(titleFont);
     title.setForeground(Color.RED);
     add(title);
+    
     // Fix Function
     setLocation(400,100);
     setLayout(null);
